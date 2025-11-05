@@ -80,12 +80,16 @@ section h3 {
 }
 
 .participants-list {
-  list-style: disc;
-  margin-left: 18px;
+  /* hide default bullet points and reset spacing so we can style items with a custom delete button */
+  list-style: none;
+  margin-left: 0;
   padding-left: 0;
 }
 
 .participants-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 6px 10px;
   border-radius: 6px;
   margin-bottom: 6px;
@@ -93,6 +97,21 @@ section h3 {
   border: 1px solid #f0f0f0;
   font-size: 14px;
   color: #333;
+}
+
+/* Small delete button shown next to each participant */
+.participant-delete {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.participant-delete:hover {
+  background: rgba(198,40,40,0.08);
 }
 
 /* When there are no participants, make the message subtle */
